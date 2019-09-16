@@ -1,5 +1,5 @@
 //var temp = "Test"
-
+/*
   var Right_lugs = [];
   var Left_lugs = [];
   var Wheel1_pins = [];
@@ -140,7 +140,7 @@ var Wheel6_pins = [1,1,0,1,0,0,0,1,0,0,1,0,0,1,1,0,1];
 
 var Left_lugs = [3,0,1,1,4,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0];
 var Right_lugs = [6,6,6,5,5,4,4,4,4,0,0,0,0,0,0,0,0,0,0,5,5,5,5,5,5,5,5];
-*/
+
 
 
 var Wheel1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -731,4 +731,4 @@ function getLugs(){
         var storedNames = JSON.parse(localStorage.getItem("Right_lugs"));
 
 
-      
+      */

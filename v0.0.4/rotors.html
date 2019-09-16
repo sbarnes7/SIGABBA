@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Lugs | SIGABA Cypher Emulator</title>
+		<title>Rotors | SIGABA Cypher Emulator</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -15,6 +15,9 @@ td{
 			font-size: 5;
 
 }
+    html {
+        overflow: hidden;
+    }
 </style>
 <body>
   <div id="right"></div>
@@ -40,27 +43,22 @@ td{
 
 
 <div class="container2">
-    <div class="row">
-        <div class="col-sm-3 text text-center">
-           <!--<button class="btn btn-primary" onClick="myfunction(1)">preset 1</button>-->
-<a href="machine.html" class="btn btn-outline-primary">Preset 1</a>
-        </div>
-        <div class="col-sm-3 text text-center">
-            <a href="machine.html" class="btn btn-outline-primary" >Preset 2</a>
+	
 
-        </div>
-        <div class="col-sm-3 text text-center">
-            <a href="machine.html" class="btn btn-outline-primary" onClick="myfunction(3)">Preset 3</a>
 
-            </div>
+</div>
+<div class="row">
+	<div class="col-sm-11">
 
-    </div>
-<!--
-    we have to redirect these buttons to the correct page 
-    and then we need to save that number or whatever and put it into a function on the m209 js so that we can set that
-    all to the right stuff on that js
--->
-    </div>
-    </body>
-
-    </html>
+  </div>
+	<div class="col-sm-1">
+      <button class="btn btn-outline-primary" onClick="getLugs()">Save</button>
+<br><br>
+		<a href="machine.html"><h3>Next&rarr;</h3></a>
+	</div>
+</div>
+</body>
+<script>
+ 
+</script>
+</html>
