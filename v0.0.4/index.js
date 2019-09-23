@@ -38,7 +38,7 @@ function makeVisible(name){
 	abTab.setAttribute("class", "unselected");
         useTab.setAttribute("class", "unselected");
 
-        
+        /*
             
         ab1.setAttribute("class", "unselectedimg");
         ab2.setAttribute("class", "unselectedimg");
@@ -46,7 +46,7 @@ function makeVisible(name){
         ab4.setAttribute("class", "unselectedimg");
 
 
-
+        */
            
         
    
@@ -63,11 +63,12 @@ function makeVisible(name){
 		worksTab.setAttribute("class", "unselected");
         useTab.setAttribute("class", "unselected");
 
+        /*
         ab1.setAttribute("class", "selectedimg");
         ab2.setAttribute("class", "selectedimg");
         ab3.setAttribute("class", "selectedimg");
         ab4.setAttribute("class", "unselectedimg");
-
+        */
 
 	} else {
 		//document.getElementById(name).style.cssText = 'display: inline;';
@@ -80,10 +81,10 @@ function makeVisible(name){
 		worksTab.setAttribute("class", "unselected");
         useTab.setAttribute("class", "selected");
 
-        ab1.setAttribute("class", "selectedimg");
+       /* ab1.setAttribute("class", "selectedimg");
         ab2.setAttribute("class", "selectedimg");
         ab3.setAttribute("class", "unselectedimg");
-        ab4.setAttribute("class", "selectedimg");
+        ab4.setAttribute("class", "selectedimg");*/
 	}
 	
 }
