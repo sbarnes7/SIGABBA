@@ -16,41 +16,773 @@ td{
 
 }
     html {
-        overflow: hidden;
+        overflow-x: hidden;
     }
 </style>
 <body>
-  <div id="right"></div>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">SIGABA</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="presets.html">Cypher</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="documentation.html">Documentation</a>
-      </li>
-         </ul>
-  </div>
-</nav>
+    <div id="right"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">SIGABA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="presets.html">Cypher</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="documentation.html">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
 
-<div class="row" style="float:right">
 
-	<div class="col-sm-1" >
-      <button class="btn btn-outline-primary" onClick="getLugs()">Save</button>
-<br><br>
-		<a href="machine.html"><h3>Next&rarr;</h3></a>
-	</div>
-</div>
+    <table class="table table-striped table-bordered">
+
+        <thead>
+            <tr>
+        <th scope="col">Rotor Name </th>
+        <th scope="col">Rotor Number</th>
+        <th scope="col">Placement of Rotor</th>
+        <th scope="col">Starting Digit</th>
+    
+        </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <th scope="row">Cipher 1</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Cipher 2</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Cipher 3</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Cipher 4</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Cipher 5</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Control 1</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Control 2</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Control 3</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Cipher 4</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Cipher 5</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+                        <option value="10"> 10</option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12</option>
+                        <option value="13"> 13</option>
+                        <option value="14"> 14</option>
+                        <option value="15"> 15</option>
+                        <option value="16"> 16</option>
+                        <option value="17"> 17</option>
+                        <option value="18"> 18</option>
+                        <option value="19"> 19</option>
+                        <option value="20"> 20</option>
+                        <option value="21"> 21</option>
+                        <option value="22"> 22</option>
+                        <option value="23"> 23</option>
+                        <option value="24"> 24</option>
+                        <option value="25"> 25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Index 1</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Index 2</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Index 3</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Index 4</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">Index 5</th>
+
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="F"> Forwards</option>
+                        <option value="R"> Backwards</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="0"> 0</option>
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+                        <option value="5"> 5</option>
+                        <option value="6"> 6</option>
+                        <option value="7"> 7</option>
+                        <option value="8"> 8</option>
+                        <option value="9"> 9</option>
+
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+        <div class="row" style="float:right">
+
+            <div class="col-sm-1">
+                <button class="btn btn-outline-primary" onClick="getLugs()">Save</button>
+                <br><br>
+                <a href="machine.html"><h3>Next&rarr;</h3></a>
+            </div>
+        </div>
 </body>
 
 </html>
