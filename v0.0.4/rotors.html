@@ -61,7 +61,7 @@ td{
                 <th scope="row">Cipher 1</th>
 
                 <td>
-                    <select>
+                    <select id="cipher1_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -75,13 +75,13 @@ td{
                     </select>
                 </td>
                 <td>
-                    <select>
-                        <option value="F"> Forwards</option>
-                        <option value="R"> Backwards</option>
+                    <select id="cipher1_place">
+                        <option value="1"> Forwards</option>
+                        <option value="-1"> Backwards</option>
                     </select>
                 </td>
                 <td>
-                    <select>
+                    <select id="cipher1_start">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -115,7 +115,7 @@ td{
                 <th scope="row">Cipher 2</th>
 
                 <td>
-                    <select>
+                    <select id="cipher2_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -130,8 +130,8 @@ td{
                 </td>
                 <td>
                     <select>
-                        <option value="F"> Forwards</option>
-                        <option value="R"> Backwards</option>
+                        <option value="1"> Forwards</option>
+                        <option value="-1"> Backwards</option>
                     </select>
                 </td>
                 <td>
@@ -778,7 +778,7 @@ td{
         <div class="row" style="float:right">
 
             <div class="col-sm-1">
-                <button class="btn btn-outline-primary" onClick="getLugs()">Save</button>
+                <button class="btn btn-outline-primary" onClick="initialize(); checkPos();">Save</button>
                 <br><br>
                 <a href="machine.html"><h3>Next&rarr;</h3></a>
             </div>
