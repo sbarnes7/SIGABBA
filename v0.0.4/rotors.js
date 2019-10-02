@@ -1,7 +1,7 @@
 // JavaScript source code
 
 
-var cipher1, cipher2, cipher3, cipher4,cipher5,control1,control2,control3;
+var cipher1, cipher2, cipher3, cipher4,cipher5,control1,control2,control3, flag;
 
 
 
@@ -13,7 +13,15 @@ function getPos(num) {
         pos = document.getElementById("cipher1_pos");
     } else if (num == 1) {
         pos = document.getElementById("cipher2_pos");
-    }
+    } else if (num == 2) {
+        pos = document.getElementById("cipher3_pos");
+
+    } else if (num == 3) {
+        pos = document.getElementById("cipher4_pos");
+
+    } else if (num == 4) {
+        pos = document.getElementById("cipher5_pos");
+    } 
     val = pos.options[pos.selectedIndex].value;
     return val;
 
@@ -53,6 +61,10 @@ function initialize() {
 
     cipher1 = getPos(0);
     cipher2 = getPos(1);
+    cipher3 = getPos(2);
+    cipher4 = getPos(3);
+    cipher5 = getPos(4);
+
 
 
 }
@@ -66,12 +78,33 @@ function print() {
 
 function checkPos() {
 
+    var array =
+        [ cipher1, cipher2, cipher3, cipher4, cipher5 ];
 
+    flag = 0;
+    for (var i = 0; i < 5; i++) {
 
-    if (cipher1 == cipher2)
-        console.log("All cipher and control rotors must have different positions");
+        for (var j = 0; j < 5; j++) {
+            if (j != i) {
+                if (array[i] == array[j])
+                    flag = 1;
+            }
+            }
+        
+    }
+
+   
     /*for (var i = 0; i < 9; i++) {
 
     }*/
+}
+
+
+function popup() {
+
+    if (flag == 1) {
+        alert("fucc");
+    }
+
 
 }
