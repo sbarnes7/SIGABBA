@@ -19,6 +19,17 @@ td{
     html {
         overflow-x: hidden;
     }
+
+    .unactivated {
+        pointer-events: none;
+        cursor: default;
+        text-decoration: none;
+        color: black;
+    }
+
+    .activated{
+
+    }
 </style>
 <body>
     <div id="right"></div>
@@ -329,10 +340,10 @@ td{
                 </td>
             </tr>
             <tr>
-                <th scope="row">Control 1</th>
+                <th scope="row" >Control 1</th>
 
                 <td>
-                    <select>
+                    <select id="control1_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -383,10 +394,10 @@ td{
                 </td>
             </tr>
             <tr>
-                <th scope="row">Control 2</th>
+                <th scope="row" >Control 2</th>
 
                 <td>
-                    <select>
+                    <select id="control2_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -437,10 +448,10 @@ td{
                 </td>
             </tr>
             <tr>
-                <th scope="row">Control 3</th>
+                <th scope="row" >Control 3</th>
 
                 <td>
-                    <select>
+                    <select id="control3_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -491,10 +502,10 @@ td{
                 </td>
             </tr>
             <tr>
-                <th scope="row">Cipher 4</th>
+                <th scope="row" >Control 4</th>
 
                 <td>
-                    <select>
+                    <select id="control4_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -545,10 +556,10 @@ td{
                 </td>
             </tr>
             <tr>
-                <th scope="row">Cipher 5</th>
+                <th scope="row">Control 5</th>
 
                 <td>
-                    <select>
+                    <select id="control5_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -602,7 +613,7 @@ td{
                 <th scope="row">Index 1</th>
 
                 <td>
-                    <select>
+                    <select id="index1_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -637,7 +648,7 @@ td{
                 <th scope="row">Index 2</th>
 
                 <td>
-                    <select>
+                    <select id="index2_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -672,7 +683,7 @@ td{
                 <th scope="row">Index 3</th>
 
                 <td>
-                    <select>
+                    <select id="index3_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -707,7 +718,7 @@ td{
                 <th scope="row">Index 4</th>
 
                 <td>
-                    <select>
+                    <select id="index4_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -743,7 +754,7 @@ td{
                 <th scope="row">Index 5</th>
 
                 <td>
-                    <select>
+                    <select id="index5_pos">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -779,9 +790,9 @@ td{
         <div class="row" style="float:right">
 
             <div id="container" class="col-sm-1">
-                <button class="btn btn-outline-primary" onClick="initialize();">Save</button>
+                <button class="btn btn-outline-primary" onClick="initialize(); checkPos(); popup();">Save</button>
                 <br><br>
-                <a href="machine.html" onClick="checkPos(); popup();"><h3>Next&rarr;</h3></a>
+                <a href="machine.html" id="link" class="unactivated" ><h3>Next&rarr;</h3></a>
             </div>
         </div>
 </body>
