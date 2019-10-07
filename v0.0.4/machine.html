@@ -10,6 +10,7 @@
 
 </script>
 <style>
+ 
     a {
         color: white;
     }
@@ -33,6 +34,19 @@
     .button5 {
         border-radius: 50%;
     }
+
+textarea{
+    width:35%;
+    height:15%;
+
+}
+
+ /*   #userbox {
+        width: 60%;
+      height:40%;
+        margin: 0 auto;
+        display:block;
+    } */
 </style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -40,6 +54,10 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+
+
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -53,8 +71,27 @@
                 </li>
             </ul>
         </div>
+
+
     </nav>
-   
+    <div id="userbox">
+        <div id="mode">
+         Mode: &nbsp;
+            <select>
+                <option value="0">Encrypt</option>
+                <option value="1">Decrypt</option>
+
+            </select>
+       </div>
+        <div id="message">
+            <textarea placeholder= "Enter message here..."></textarea>
+        </div>
+
+        <div id="button">
+            <button>Encrpyt</button>
+            </div>
+
+    </div>
 
 </body>
 </html>
