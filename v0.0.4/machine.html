@@ -36,10 +36,38 @@
     }
 
 textarea{
-    width:35%;
+   resize:none;
     height:15%;
-
+    width:100%;
 }
+
+    #mode {
+        vertical-align: top;
+        display: inline-block;
+        width: 20%;
+        position: relative;
+    }
+
+#message{   
+    display: inline-block;
+    margin-left:15%;
+    width: 40%;
+    position:relative;
+}
+#button{
+    vertical-align:top;
+    display:inline-block;
+    margin-left:15%;
+}
+
+    #output-box {
+        background-color: white;
+        color: black;
+        height: 15%;
+        width: 40%;
+        margin-left:35.6%;
+        position:absolute;
+    }
 
  /*   #userbox {
         width: 60%;
@@ -47,6 +75,12 @@ textarea{
         margin: 0 auto;
         display:block;
     } */
+
+    #wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width:100%;
+    }
 </style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -74,24 +108,31 @@ textarea{
 
 
     </nav>
-    <div id="userbox">
+
+    <div id="wrapper">
         <div id="mode">
-         Mode: &nbsp;
+            Mode: &nbsp;
             <select>
                 <option value="0">Encrypt</option>
                 <option value="1">Decrypt</option>
 
             </select>
-       </div>
+        </div>
         <div id="message">
-            <textarea placeholder= "Enter message here..."></textarea>
+            <textarea placeholder="Enter message here..."></textarea>
         </div>
 
         <div id="button">
-            <button>Encrpyt</button>
-            </div>
+            <button>Go</button>
+        </div>
 
+        <div style=""></div>
+        <div id="output-box">OUTPUT BOX </div>
     </div>
+
+ 
+
+   
 
 </body>
 </html>
