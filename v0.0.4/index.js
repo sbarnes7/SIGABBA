@@ -15,6 +15,7 @@ function makeVisible(name){
 
     var ab3 = document.getElementById('ab3');
     var ab4 = document.getElementById('ab4');
+    var ab5 = document.getElementById('ab5');
 
 
 
@@ -38,15 +39,15 @@ function makeVisible(name){
 	abTab.setAttribute("class", "unselected");
         useTab.setAttribute("class", "unselected");
 
-        /*
+        
             
         ab1.setAttribute("class", "unselectedimg");
         ab2.setAttribute("class", "unselectedimg");
         ab3.setAttribute("class", "unselectedimg");
         ab4.setAttribute("class", "unselectedimg");
+        ab5.setAttribute("class", "selectedimg");
 
-
-        */
+        
            
         
    
@@ -63,12 +64,13 @@ function makeVisible(name){
 		worksTab.setAttribute("class", "unselected");
         useTab.setAttribute("class", "unselected");
 
-        /*
+        
         ab1.setAttribute("class", "selectedimg");
         ab2.setAttribute("class", "selectedimg");
-        ab3.setAttribute("class", "selectedimg");
+        ab3.setAttribute("class", "unselectedimg");
         ab4.setAttribute("class", "unselectedimg");
-        */
+        ab5.setAttribute("class", "unselectedimg");
+
 
 	} else {
 		//document.getElementById(name).style.cssText = 'display: inline;';
@@ -81,10 +83,12 @@ function makeVisible(name){
 		worksTab.setAttribute("class", "unselected");
         useTab.setAttribute("class", "selected");
 
-       /* ab1.setAttribute("class", "selectedimg");
-        ab2.setAttribute("class", "selectedimg");
-        ab3.setAttribute("class", "unselectedimg");
-        ab4.setAttribute("class", "selectedimg");*/
+        ab1.setAttribute("class", "unselectedimg");
+        ab2.setAttribute("class", "unselectedimg");
+        ab3.setAttribute("class", "selectedimg");
+        ab4.setAttribute("class", "selectedimg");
+        ab5.setAttribute("class", "unselectedimg");
+
 	}
 	
 }

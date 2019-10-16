@@ -34,8 +34,11 @@ display: none;
 .selectedimg{
     display:inline;
     width:360px;
-   
+  
 
+}
+#pictures{
+    margin-top:10%;
 }
 
 .unselectedimg{
