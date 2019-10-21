@@ -1,12 +1,14 @@
 <html>
-	<head>
-		<title>Rotors | SIGABA Cypher Emulator</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="rotors.js"> </script>
-    </head>
+<head>
+    <title>Rotors | SIGABA Cypher Emulator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="rotors.js"></script>
+    <script src="app.js"></script>
+
+</head>
 <style>
 td{
 	text-align: center;
@@ -73,7 +75,7 @@ td{
                 <th scope="row">Cipher 1</th>
 
                 <td>
-                    <select id="cipher1_pos">
+                    <select id="cipher1_pos" class="cipher">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -127,7 +129,7 @@ td{
                 <th scope="row">Cipher 2</th>
 
                 <td>
-                    <select id="cipher2_pos">
+                    <select id="cipher2_pos" class="cipher">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -181,7 +183,7 @@ td{
                 <th scope="row">Cipher 3</th>
 
                 <td>
-                    <select id="cipher3_pos">
+                    <select id="cipher3_pos" class="cipher">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -235,7 +237,7 @@ td{
                 <th scope="row">Cipher 4</th>
 
                 <td>
-                    <select id="cipher4_pos">
+                    <select id="cipher4_pos" class="cipher">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -289,7 +291,7 @@ td{
                 <th scope="row">Cipher 5</th>
 
                 <td>
-                    <select id="cipher5_pos">
+                    <select id="cipher5_pos" class="cipher">
                         <option value="0"> 0</option>
                         <option value="1"> 1</option>
                         <option value="2"> 2</option>
@@ -789,7 +791,7 @@ td{
         <div class="row" style="float:right">
 
             <div id="container" class="col-sm-1">
-                <button class="btn btn-outline-primary" onClick="initialize(); checkPos(); popup();">Save</button>
+                <button class="btn btn-outline-primary" onClick="initialize(); checkPos(); popup(); setRotors();">Save</button>
                 <br><br>
                 <a href="machine.html" id="link" class="unactivated" ><h3>Next&rarr;</h3></a>
             </div>
