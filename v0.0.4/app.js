@@ -1,14 +1,25 @@
 
 function setRotors() {
-    var a
+    var ciph, contr, ind;
+    var place;
     var i;
-    a = document.getElementsByClassName("cipher");
+
+    ciph = document.getElementsByClassName("cipher");
+    contr = document.getElementsByClassName("control");
+    ind = document.getElementsByClassName("index");
+
+
+   place = document.getElementsByClassName("placement");
+  
+
+  
     for (i in a) {
-        console.log(a[i].value);
+
+        //PUSH EVERYTHING INTO ARRAYS 
     }
-    var rotorNumber = [];
-    var Placement = [];
-    var digit = [];
+
+    console.log(Cwheel_orientation);
+   
 
 
 }
@@ -85,13 +96,13 @@ var control_tops = [];
 var index_tops = [];
 //...or...we might want to keep an entire array so we can talk reference each char
 
+var Cwheel_orientation = [];
 //IGNORED FOR NOW:
 //the orientation of each wheel (1 = step forward A>B -1= step backward B>A]
 var Cwheel_orientation = [];
 var local = localStorage["preset"];
 if (local == 4) {
-    console.log("\n\n\nTHIS WORKED HELLO LOOK AT ME!\n\n\n\n");
-
+   // console.log("\n\n\nTHIS WORKED HELLO LOOK AT ME!\n\n\n\n");
 
     /*
     var control_rotors = [0, 1, 2, 3, 4];
@@ -109,7 +120,7 @@ if (local == 4) {
     //IGNORED FOR NOW:
     //the orientation of each wheel (1 = step forward A>B -1= step backward B>A]
     var Cwheel_orientation = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-    //var Iwheel_orientation = [-1, -1, -1, -1, -1];
+    
     */
 }
 //use these to build up the array of the wirings:
@@ -194,11 +205,11 @@ pos_of_G = linearSearch(control_bank[4], 6);
 pos_of_H = linearSearch(control_bank[4], 7);
 pos_of_I = linearSearch(control_bank[4], 8);
 //console.log("Where F sits on control wheel 4")
-console.log(pos_of_F);
+//console.log(pos_of_F);
 //console.log("Where G sits on control wheel 4")
-console.log(pos_of_G);
+//console.log(pos_of_G);
 //console.log("Where H sits on control wheel 4")
-console.log(pos_of_H);
+//console.log(pos_of_H);
 //console.log("Where I sits on control wheel 4")
 console.log(pos_of_I);
 
