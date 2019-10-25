@@ -10,18 +10,50 @@ function setRotors() {
 
 
    place = document.getElementsByClassName("placement");
-  
 
-  
-    for (i in a) {
 
-        //PUSH EVERYTHING INTO ARRAYS 
+ 
+
+/*
+    //which digit is on top of each rotor
+    cipher_tops = [];
+    control_tops = [];
+     index_tops = [];*/
+
+
+    for (i in ciph) {
+        cipher_rotors.push(ciph[i].value);
+    }
+    for (i in contr) {
+        control_rotors.push(contr[i].value);
+    }
+    for (i in ind) {
+        index_rotors.push(ind[i].value);
+    } 
+
+    for (i in 10) {
+
+        Cwheel_orientation.push('0');
     }
 
-    console.log(Cwheel_orientation);
-   
+    var count = 0;
 
-
+    for (i in place) {
+        if (i < 5) { 
+            Cwheel_orientation[cipher_rotors[i]] = place[i].value;
+            
+    } else {
+            Cwheel_orientation[control_rotors[i-5]] = place[i].value;
+            
+    }
+        
+    
+    }
+        console.log(Cwheel_orientation);
+    /*
+    console.log(cipher_rotors);
+    console.log(control_rotors);
+    console.log(index_rotors);*/
 }
 function linearSearch(array, toFind) {
     for (let i = 0; i < array.length; i++) {
@@ -99,7 +131,7 @@ var index_tops = [];
 var Cwheel_orientation = [];
 //IGNORED FOR NOW:
 //the orientation of each wheel (1 = step forward A>B -1= step backward B>A]
-var Cwheel_orientation = [];
+//var Cwheel_orientation = [];
 var local = localStorage["preset"];
 if (local == 4) {
    // console.log("\n\n\nTHIS WORKED HELLO LOOK AT ME!\n\n\n\n");
