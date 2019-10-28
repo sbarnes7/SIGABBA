@@ -3,16 +3,32 @@ function setRotors() {
     var ciph, contr, ind;
     var place;
     var i;
-
+    var ciph_place, contr_place, ind_place;
     ciph = document.getElementsByClassName("cipher");
     contr = document.getElementsByClassName("control");
     ind = document.getElementsByClassName("index");
+    
+    place = document.getElementsByClassName("placement");
+
+    ciph_place = document.getElementByClassName("ciph_start");
+    contr_place = document.getElementByClassName("contr_start");
+    ind_place = document.getElementByClassName("ind_start");
 
 
-   place = document.getElementsByClassName("placement");
 
 
- 
+    for (i in ciph_place) {
+        cipher_tops.push(ciph_place[i].value);
+
+    }
+
+    for (i in contr_place) {
+        control_tops.push(contr_place[i].value);
+    }
+
+    for (i in ind_place) {
+        index_tops.push(ind_place[i].value);
+    }
 
 /*
     //which digit is on top of each rotor
@@ -31,10 +47,6 @@ function setRotors() {
         index_rotors.push(ind[i].value);
     } 
 
-    for (i in 10) {
-
-        Cwheel_orientation.push('0');
-    }
 
     var count = 0;
 
@@ -49,7 +61,17 @@ function setRotors() {
         
     
     }
-        console.log(Cwheel_orientation);
+
+    console.log("Cipher Start numbers", cipher_tops);
+    console.log("Control Start numbers", control_tops);
+    console.log("Index Start numbers", index_tops);
+
+    console.log("Wheels Orientation", Cwheel_orientation);
+
+    console.log("Cipher Rotor numbers", cipher_rotors);
+    console.log("Control Rotor numbers", control_rotors);
+    console.log("Index Rotor numbers", index_rotors);
+
     /*
     console.log(cipher_rotors);
     console.log(control_rotors);
