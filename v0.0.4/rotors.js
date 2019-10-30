@@ -153,3 +153,101 @@ function popup() {
 
 
 }
+
+function setRotors() {
+    var ciph, contr, ind;
+    var place;
+    var i;
+    var ciph_place, contr_place, ind_place;
+    ciph = document.getElementsByClassName("cipher");
+    contr = document.getElementsByClassName("control");
+    ind = document.getElementsByClassName("index");
+
+    place = document.getElementsByClassName("placement");
+
+    ciph_place = document.getElementsByClassName("ciph_start");
+    contr_place = document.getElementsByClassName("contr_start");
+    ind_place = document.getElementsByClassName("ind_start");
+
+
+    var cipher_tops = [];
+    var control_tops = [];
+    var index_tops = [];
+
+    for (i in ciph_place) {
+        cipher_tops.push(ciph_place[i].value);
+
+    }
+
+    for (i in contr_place) {
+        control_tops.push(contr_place[i].value);
+    }
+
+    for (i in ind_place) {
+        index_tops.push(ind_place[i].value);
+    }
+
+    /*
+        //which digit is on top of each rotor
+        cipher_tops = [];
+        control_tops = [];
+         index_tops = [];*/
+
+    var cipher_rotors = [];
+    var control_rotors = [];
+    var index_rotors = [];
+
+    for (i in ciph) {
+        cipher_rotors.push(ciph[i].value);
+    }
+    for (i in contr) {
+        control_rotors.push(contr[i].value);
+    }
+    for (i in ind) {
+        index_rotors.push(ind[i].value);
+    }
+
+
+   
+    var Cwheel_orientation = [];
+    for (i in place) {
+        if (i < 5) {
+            Cwheel_orientation[cipher_rotors[i]] = place[i].value;
+
+        } else {
+            Cwheel_orientation[control_rotors[i - 5]] = place[i].value;
+
+        }
+
+
+    }
+
+    console.log("Cipher Start numbers", cipher_tops);
+    console.log("Control Start numbers", control_tops);
+    console.log("Index Start numbers", index_tops);
+
+    console.log("Wheels Orientation", Cwheel_orientation);
+
+    console.log("Cipher Rotor numbers", cipher_rotors);
+    console.log("Control Rotor numbers", control_rotors);
+    console.log("Index Rotor numbers", index_rotors);
+
+    /*
+    console.log(cipher_rotors);
+    console.log(control_rotors);
+    console.log(index_rotors);*/
+
+
+    localStorage["cipher_tops"] = cipher_tops;
+    localStorage["control_tops"] = control_tops;
+    localStorage["index_tops"] = index_tops;
+
+    localStorage["Cwheel_orientation"] = Cwheel_orientation;
+
+    localStorage["cipher_rotors"] = cipher_rotors;
+    localStorage["control_rotors"] = control_rotors;
+    localStorage["index_rotors"] = index_rotors;
+
+
+
+}

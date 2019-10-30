@@ -10,9 +10,9 @@ function setRotors() {
     
     place = document.getElementsByClassName("placement");
 
-    ciph_place = document.getElementByClassName("ciph_start");
-    contr_place = document.getElementByClassName("contr_start");
-    ind_place = document.getElementByClassName("ind_start");
+    ciph_place = document.getElementsByClassName("ciph_start");
+    contr_place = document.getElementsByClassName("contr_start");
+    ind_place = document.getElementsByClassName("ind_start");
 
 
 
@@ -76,7 +76,24 @@ function setRotors() {
     console.log(cipher_rotors);
     console.log(control_rotors);
     console.log(index_rotors);*/
+
+    
+    localStorage["cipher_tops"] = cipher_tops;
+    localStorage["control_tops"] = control_tops;
+    localStorage["index_tops"] = index_tops;
+
+    localStorage["Cwheel_orientation"] = Cwheel_orientation;
+
+    localStorage["cipher_rotors"] = cipher_rotors;
+    localStorage["control_rotors"] = control_rotors;
+    localStorage["index_rotors"] = index_rotors;
+
+    
+
 }
+
+
+
 function linearSearch(array, toFind) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] === toFind)
