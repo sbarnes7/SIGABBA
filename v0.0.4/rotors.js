@@ -170,21 +170,21 @@ function setRotors() {
     ind_place = document.getElementsByClassName("ind_start");
 
 
-    var cipher_tops = [];
-    var control_tops = [];
-    var index_tops = [];
+    var cipher_tops = ["0","0","0","0","0"];
+    var control_tops = ["0","0","0","0","0"];
+    var index_tops = ["0","0","0","0","0"];
 
-    for (i in ciph_place) {
-        cipher_tops.push(ciph_place[i].value);
+    for (i = 0; i < 5; i++) {
+        cipher_tops[i] = ciph_place[i].value;
 
     }
 
-    for (i in contr_place) {
-        control_tops.push(contr_place[i].value);
+    for (i = 0; i < 5; i++) {
+        control_tops[i] = contr_place[i].value;
     }
 
-    for (i in ind_place) {
-        index_tops.push(ind_place[i].value);
+    for (i = 0; i < 5; i++) {
+        index_tops[i] =ind_place[i].value;
     }
 
     /*
@@ -193,24 +193,24 @@ function setRotors() {
         control_tops = [];
          index_tops = [];*/
 
-    var cipher_rotors = [];
-    var control_rotors = [];
-    var index_rotors = [];
+    var cipher_rotors = ["0","0","0","0","0"];
+    var control_rotors = ["0", "0", "0", "0", "0"];
+    var index_rotors = ["0", "0", "0", "0", "0"];
 
-    for (i in ciph) {
-        cipher_rotors.push(ciph[i].value);
+    for (i = 0; i < 5; i++ ) {
+        cipher_rotors[i] = ciph[i].value;
     }
-    for (i in contr) {
-        control_rotors.push(contr[i].value);
+    for (i = 0; i < 5; i++) {
+        control_rotors[i] = contr[i].value;
     }
-    for (i in ind) {
-        index_rotors.push(ind[i].value);
+    for (i = 0; i < 5; i++) {
+        index_rotors[i] = ind[i].value;
     }
 
 
    
-    var Cwheel_orientation = [];
-    for (i in place) {
+    var Cwheel_orientation = ["0", "0", "0", "0", "0","0", "0", "0", "0", "0"];
+    for (i = 0; i < 10; i++) {
         if (i < 5) {
             Cwheel_orientation[cipher_rotors[i]] = place[i].value;
 
@@ -238,16 +238,21 @@ function setRotors() {
     console.log(index_rotors);*/
 
 
-    localStorage["cipher_tops"] = cipher_tops;
-    localStorage["control_tops"] = control_tops;
-    localStorage["index_tops"] = index_tops;
-
-    localStorage["Cwheel_orientation"] = Cwheel_orientation;
-
+    localStorage.setItem("cipher_tops", JSON.stringify(cipher_tops));
+    localStorage.setItem("control_tops", JSON.stringify(control_tops));
+    localStorage.setItem("index_tops", JSON.stringify(index_tops));
+    
+    //localStorage["index_tops"] = index_tops;
+    localStorage.setItem("Cwheel_orientation", JSON.stringify(Cwheel_orientation));
+    //localStorage["Cwheel_orientation"] = Cwheel_orientation;
+    /*
     localStorage["cipher_rotors"] = cipher_rotors;
     localStorage["control_rotors"] = control_rotors;
     localStorage["index_rotors"] = index_rotors;
+    */
 
-
+    localStorage.setItem("cipher_rotors", JSON.stringify(cipher_rotors));
+    localStorage.setItem("control_rotors", JSON.stringify(control_rotors));
+    localStorage.setItem("index_rotors", JSON.stringify(index_rotors));
 
 }

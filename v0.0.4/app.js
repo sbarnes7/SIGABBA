@@ -81,45 +81,16 @@ var index_tops = [];
 //the orientation of each wheel (1 = step forward -1= step backward 
 var Cwheel_orientation = [];
 
-var local = localStorage["preset"];
-if (local == 1) {
-    console.log("local = 1")
+reset();
 
-    //identify which rotors are sitting where
-    control_rotors = [0, 1, 2, 3, 4];
-    cipher_rotors = [5, 6, 7, 8, 9];
-    index_rotors = [0, 1, 2, 3, 4];
+console.log("CONTROLS ROTORS ", control_rotors);
 
-
-    //which digit is on top of each rotor
-    cipher_tops = [0, 11, 0, 0, 0];
-    control_tops = [0, 0, 14, 14, 0];
-    index_tops = [0, 0, 0, 0, 0];
-    //...or...we might want to keep an entire array so we can talk reference each char
-
-    //the orientation of each wheel (1 = step forward -1= step backward 
-    Cwheel_orientation = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
-} else if (local == 4) {
-    
-    console.log("LOCAL = 4");
-
-    index_rotors = localStorage["index_rotors"];
-    cipher_rotors = localStorage["cipher_rotors"];
-    control_rotors = localStorage["control_rotors"];
-
-    cipher_tops = localStorage["cipher_tops"];
-    control_tops = localStorage["control_tops"];
-    index_tops = localStorage["index_tops"];
-
-    Cwheel_orientation = localStorage["Cwheel_orientation"];
-    console.log("CONTROLS ROTORS ", control_rotors);
-    console.log("CIPHER ROTORS ", cipher_rotors);
-    console.log("INDEX ROTORS ", index_rotors);
-    console.log("CONTROLS TOPS ", control_tops);
-    console.log("CIPHER TOPS ",cipher_tops);
-    console.log("INDEX TOPS: ", index_tops);
-    console.log("CWHEEL: ", Cwheel_orientation);
-}
+console.log("CIPHER ROTORS ", cipher_rotors);
+console.log("INDEX ROTORS ", index_rotors);
+console.log("CONTROLS TOPS ", control_tops);
+console.log("CIPHER TOPS ", cipher_tops);
+console.log("INDEX TOPS: ", index_tops);
+console.log("CWHEEL: ", Cwheel_orientation);
 //use these to build up the array of the wirings:
 var Control_Wheels_Wiring = [Cwirings[control_rotors[0]], Cwirings[control_rotors[1]], Cwirings[control_rotors[2]], Cwirings[control_rotors[3]], Cwirings[control_rotors[4]]];
 var Cipher_Wheels_Wiring = [Cwirings[cipher_rotors[0]], Cwirings[cipher_rotors[1]], Cwirings[cipher_rotors[2]], Cwirings[cipher_rotors[3]], Cwirings[cipher_rotors[4]]];
@@ -157,11 +128,14 @@ function getPlaintext(plainNum) {
 
 function getCiphertext(plainNum) {
     //Run the plain text letter through:
-    // console.log(plainNum);
+     console.log("plainNum ", plainNum);
     var value = plainNum;
+    console.log("value ", value);
+
     for (i = 0; i < 5; i++) {
+        console.log("i = ", i, " Value= ", value); 
         value = Cipher_Wheels_Wiring[i][value]
-        //console.log(value);
+        console.log(value);
     }
     //console.log("Resulting cipher number: %d", value);
     var cipherText = alphabet[value];
@@ -515,7 +489,13 @@ function encryptstring(stringletters) {
         i++;
     }
 
-    console.log("Cipher string: %s\n", cipherTextString);
+
+   // console.log("Cipher string: ")
+  
+    
+    document.getElementById("output-box").innerHTML = cipherTextString.join('');
+
+    console.log( cipherTextString);
 
 }
 
@@ -538,10 +518,82 @@ function decryptstring(stringletters) {
         i++;
     }
 
-    console.log("Cipher string: %s\n", cipherTextString);
+   // console.log("Cipher string: ", cipherTextString);
+    document.getElementById("output-box").innerHTML = cipherTextString.join('');
+
+    console.log(cipherTextString);
 }
 
 
-encryptstring("ALIENS EXIST");
-decryptstring("DZUIYQMTMYJG");
+
+function doCipher() {
+
+    var val = document.getElementById("mod");
+   
+    if (val.value == '0')
+        encryptstring(document.getElementById("mes").value);
+        //cleanup function to reset how configurations
+    else
+        decryptstring(document.getElementById("mes").value);
+
+    reset();
+}
+
+
+function reset() {
+
+    var local = localStorage["preset"];
+    if (local == 1) {
+        console.log("local = 1")
+
+        //identify which rotors are sitting where
+        control_rotors = [0, 1, 2, 3, 4];
+        cipher_rotors = [5, 6, 7, 8, 9];
+        index_rotors = [0, 1, 2, 3, 4];
+
+
+        //which digit is on top of each rotor
+        cipher_tops = [0, 11, 0, 0, 0];
+        control_tops = [0, 0, 14, 14, 0];
+        index_tops = [0, 0, 0, 0, 0];
+        //...or...we might want to keep an entire array so we can talk reference each char
+
+        //the orientation of each wheel (1 = step forward -1= step backward 
+        Cwheel_orientation = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+    } else if (local == 4) {
+
+        console.log("LOCAL = 4");
+        /*
+        index_rotors = localStorage["index_rotors"];
+        cipher_rotors = localStorage["cipher_rotors"];
+        control_rotors = localStorage["control_rotors"];
+        */
+        cipher_rotors = JSON.parse(localStorage.getItem("cipher_rotors"));
+        control_rotors = JSON.parse(localStorage.getItem("control_rotors"));
+        index_rotors = JSON.parse(localStorage.getItem("index_rotors"));
+        cipher_tops = JSON.parse(localStorage.getItem("cipher_tops"));
+        control_tops = JSON.parse(localStorage.getItem("control_tops"));
+        index_tops = JSON.parse(localStorage.getItem("index_tops"));
+        Cwheel_orientation = JSON.parse(localStorage.getItem("Cwheel_orientation"));
+        for (i = 0; i < 5; i++) {
+            cipher_rotors[i] = parseInt(cipher_rotors[i]);
+            control_rotors[i] = parseInt(control_rotors[i]);
+            index_rotors[i] = parseInt(index_rotors[i]);
+            cipher_tops[i] = parseInt(cipher_tops[i]);
+            control_tops[i] = parseInt(control_tops[i]);
+            index_tops[i] = parseInt(index_tops[i]);
+        }
+
+        for (i = 0; i < 10; i++) {
+            Cwheel_orientation[i] = parseInt(Cwheel_orientation[i]);
+
+        }
+        //control_tops = localStorage["control_tops"];
+        //index_tops = localStorage["index_tops"];
+
+        //Cwheel_orientation = localStorage["Cwheel_orientation"];
+
+    }
+}
+
 
