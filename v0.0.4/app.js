@@ -104,6 +104,7 @@ var Index_Wheels_Wiring = [Iwirings[index_rotors[0]], Iwirings[index_rotors[1]],
 
 function getPlaintext(plainNum) {
     //Run the plain text letter through:
+    //MISSES A'S
     var value = plainNum;
     for (i = 4; i >= 0; i--) {
         value = linearSearch(Cipher_Wheels_Wiring[i], value);
@@ -113,8 +114,18 @@ function getPlaintext(plainNum) {
     //decryption is dependent on how many letters have been encrypted
     value = value - lettercount;
     if (value < 0) {
-        value = 26 + value;
+        var temp = value * -1;
+        var mod = temp / 26;
+        mod = Math.floor(mod);
+
+        value = 26 * (mod + 1) + value;
+
+        if (value == 26)
+            value = 0;
     }
+
+
+   
     var plainText = alphabet[value];
     // console.log("plaintext before the if %s\n", plainText);
 
@@ -543,6 +554,7 @@ function doCipher() {
 function reset() {
 
     var local = localStorage["preset"];
+     lettercount = 0;
     if (local == 1) {
         console.log("local = 1")
 
