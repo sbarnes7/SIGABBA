@@ -502,9 +502,12 @@ function encryptstring(stringletters) {
 
 
    // console.log("Cipher string: ")
-  
+    document.getElementById("output-box").innerHTML = '';
     
-    document.getElementById("output-box").innerHTML = cipherTextString.join('');
+    for (i = 0; i < cipherTextString.length; i++) {
+        document.getElementById("output-box").innerHTML += cipherTextString[i];
+
+    }
 
     console.log( cipherTextString);
 
@@ -530,7 +533,12 @@ function decryptstring(stringletters) {
     }
 
    // console.log("Cipher string: ", cipherTextString);
-    document.getElementById("output-box").innerHTML = cipherTextString.join('');
+    document.getElementById("output-box").innerHTML = '';
+    for (i = 0; i < cipherTextString.length; i++) {
+        document.getElementById("output-box").innerHTML += cipherTextString[i];
+
+    }
+   
 
     console.log(cipherTextString);
 }
