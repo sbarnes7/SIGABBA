@@ -580,7 +580,44 @@ function reset() {
 
         //the orientation of each wheel (1 = step forward -1= step backward 
         Cwheel_orientation = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
-    } else if (local == 4) {
+    }
+	else if (local == 2) {
+        console.log("local = 2")
+
+        //identify which rotors are sitting where
+        control_rotors = [0, 1, 2, 3, 4];
+        cipher_rotors = [5, 6, 7, 8, 9];
+        index_rotors = [0, 1, 2, 3, 4];
+
+
+        //which digit is on top of each rotor
+        cipher_tops = [0, 0, 0, 0, 0];
+        control_tops = [0, 0, 0, 0, 0];
+        index_tops = [0, 0, 0, 0, 0];
+        //...or...we might want to keep an entire array so we can talk reference each char
+
+        //the orientation of each wheel (1 = step forward -1= step backward 
+        Cwheel_orientation = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+    }
+	else if (local == 3) {
+        console.log("local = 3")
+
+        //identify which rotors are sitting where
+        control_rotors = [3, 6,2,8,9];
+        cipher_rotors = [5,1,7,0,4];
+        index_rotors = [0, 1, 2, 3, 4];
+
+
+        //which digit is on top of each rotor
+        cipher_tops = [0, 0, 2, 0, 0];
+        control_tops = [0, 0, 14, 14, 0];
+        index_tops = [0, 6, 0, 9, 0];
+        //...or...we might want to keep an entire array so we can talk reference each char
+
+        //the orientation of each wheel (1 = step forward -1= step backward 
+        Cwheel_orientation = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+    }
+	else if (local == 4) {
 
         console.log("LOCAL = 4");
         /*
@@ -594,8 +631,9 @@ function reset() {
         cipher_tops = JSON.parse(localStorage.getItem("cipher_tops"));
         control_tops = JSON.parse(localStorage.getItem("control_tops"));
         index_tops = JSON.parse(localStorage.getItem("index_tops"));
-        Cwheel_orientation = JSON.parse(localStorage.getItem("Cwheel_orientation"));
-        for (i = 0; i < 5; i++) {
+        //Cwheel_orientation = JSON.parse(localStorage.getItem("Cwheel_orientation"));
+        Cwheel_orientation = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+		for (i = 0; i < 5; i++) {
             cipher_rotors[i] = parseInt(cipher_rotors[i]);
             control_rotors[i] = parseInt(control_rotors[i]);
             index_rotors[i] = parseInt(index_rotors[i]);
@@ -604,11 +642,11 @@ function reset() {
             index_tops[i] = parseInt(index_tops[i]);
         }
 
-        for (i = 0; i < 10; i++) {
+       /* for (i = 0; i < 10; i++) {
             Cwheel_orientation[i] = parseInt(Cwheel_orientation[i]);
 
         }
-        //control_tops = localStorage["control_tops"];
+        *///control_tops = localStorage["control_tops"];
         //index_tops = localStorage["index_tops"];
 
         //Cwheel_orientation = localStorage["Cwheel_orientation"];
